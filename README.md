@@ -4,9 +4,9 @@ This Git repository contains a collection of functions and scripts for automatin
 
 ### Repository Structure
 
-The repository is organized into the following directories:
+The repository is organized into the following structure:
 
-- **dicas**: Contains functions for consuming API data, accessing SQL Server, interacting with Telegram, and generating tips and data processing.
+![Arquitetura_AWS_MagicBet](https://github.com/felipe-de-godoy/bet_arbitrage_automation/assets/48608521/94b2dbab-9258-417a-a141-bd8608297ff8)
 
 ### Installation
 
@@ -50,7 +50,7 @@ Add the lambda_funcao.py file to the existing zip file:
 ```bash
 zip -g Pacote_Magic_Bet_Lambda_V0.zip lambda_funcao.py
 ```
-
+Upload to the lambda in your account
 
 Package History
 The deployment package Pacote_Magic_Bet_Lambda_V0.zip can now be uploaded to AWS Lambda. Please refer to the AWS Lambda documentation for detailed instructions on deploying a Python package.
