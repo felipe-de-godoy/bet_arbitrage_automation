@@ -1,0 +1,19 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Transform: 'AWS::Serverless-2016-10-31'
+Description: An AWS Serverless Specification template describing your function.
+Resources:
+  CapturaPlacarJogos:
+    Type: 'AWS::Serverless::Function'
+    Properties:
+      Handler: lambda_Preenche_Historico_Placar.main
+      Runtime: python3.8
+      CodeUri: .
+      Description: ''
+      MemorySize: 256
+      Timeout: 900
+      Role: 'arn:aws:iam::223720829886:role/service-role/GeradorDicasFuncao'
+      Events:
+        Schedule1:
+          Type: Schedule
+          Properties:
+            Schedule: 'cron(15 7-8 ? * 1,5 *)'
