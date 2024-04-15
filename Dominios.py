@@ -1,9 +1,9 @@
 # -*- coding: utf-8 -*-
-bet_token = '57659-nlPvoqXEFejq5s'
-BOT_API_TOKEN ="1039119605:AAHsBoGKTMvAU7pCNVAAQrcshfYgoOC0qYI"
+bet_token = ''
+BOT_API_TOKEN =""
 
-key_s3    = 'AKIATIFWM6O7LNNWBXW7'
-secret_s3 = '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'
+key_s3    = ''
+secret_s3 = ''
 
 path_s3_historico      = 's3://magic-bet-raw/Resultados/' 
 file_s3_historico_name = 'historico.csv'
