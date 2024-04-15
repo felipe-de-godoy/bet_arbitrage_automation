@@ -1,24 +1,59 @@
-# valuebets_api
+## Bet Arbitrage Automation
 
-Pasta dicas contem as funcoes de consumo de api de dados, do sql server, do telegram e funcoes geradoras de dicas e de tratamento
+This Git repository contains a collection of functions and scripts for automating the process of finding and placing value bets in the betting market. The goal is to identify underpriced bets and send notifications to users to take advantage of these opportunities.
 
-Para instalar no lambda basta instalar os pacotes necessarios do python num terminal linux, e então zipar a pasta
-https://docs.aws.amazon.com/pt_br/lambda/latest/dg/python-package.html
-Estou armazenando o historico de pacotes de implantação em s3://magic-bet-raw/PacotesImplantacao/
+### Repository Structure
 
-Requisitos para tudo funcionar corretamente:
+The repository is organized into the following directories:
 
-Inicializar uma pasta e rodar: 
+- **dicas**: Contains functions for consuming API data, accessing SQL Server, interacting with Telegram, and generating tips and data processing.
 
-pip3 install --target ./package pandas==1.2.4  --upgrade
+### Installation
+
+To install and deploy the code on AWS Lambda, follow these steps:
+
+1. Initialize a new directory.
+2. Open a terminal and navigate to the directory.
+3. Run the following commands to install the required Python packages:
+
+```bash
+pip3 install --target ./package pandas==1.2.4 --upgrade
 pip3 install --target ./package numpy==1.19.5 --upgrade
-pip3 install --target ./package s3fs==2021.08.0  --upgrade
-pip3 install --target ./package requests==2.25.1  --upgrade
-pip3 install --target ./package pyTelegramBotAPI  --upgrade
+pip3 install --target ./package s3fs==2021.08.0 --upgrade
+pip3 install --target ./package requests==2.25.1 --upgrade
+pip3 install --target ./package pyTelegramBotAPI --upgrade
+```
 
+## Deployment Instructions
+
+To deploy the code on AWS Lambda, follow these steps:
+
+1. Change directory to `package`:
+```bash
 cd package
-cole os codigos da pasta dicas, e rode abaixo
+```
+
+Zip the contents:
+
+```bash
 zip -r ../Pacote_Magic_Bet_Lambda_V0.zip .
+```
+
+Return to the root directory:
+
+```bash
 cd ..
+```
+
+Add the lambda_funcao.py file to the existing zip file:
+
+```bash
 zip -g Pacote_Magic_Bet_Lambda_V0.zip lambda_funcao.py
-"# bet_arbitrage_automation" 
+```
+
+
+Package History
+The deployment package Pacote_Magic_Bet_Lambda_V0.zip can now be uploaded to AWS Lambda. Please refer to the AWS Lambda documentation for detailed instructions on deploying a Python package.
+
+About
+This project is developed for bet arbitrage automation. For any questions or inquiries, please contact the project maintainer.
