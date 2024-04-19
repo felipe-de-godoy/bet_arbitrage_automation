@@ -1,6 +1,6 @@
 ## Bet Arbitrage Automation
 
-This Git repository contains a collection of functions and scripts for automating the process of finding and placing value bets in the betting market. The goal is to identify underpriced bets and send notifications to users to take advantage of these opportunities.
+This Git repository contains a collection of functions and scripts for automating the process of finding value bets in the betting market. The goal is to identify underpriced bets and send notifications to users to take advantage of these opportunities.
 
 ### Repository Structure
 
